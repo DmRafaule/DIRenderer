@@ -5,7 +5,6 @@
 namespace DI{
 	
 	struct Mesh;
-	struct Model;
 	struct Shader;
   class Primitive;
   class Engine;
@@ -35,10 +34,5 @@ namespace DI{
 		  static void DrawArrays(Mesh &mesh, unsigned int gl_render_type);
 
   };
-	// Control what and how to draw data to screen
-	namespace RenderHandler{
-		// Draw model
-		//void Draw(Model &model,Shader& shader);
-	};
 
 };

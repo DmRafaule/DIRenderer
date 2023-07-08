@@ -22,14 +22,6 @@ void RendererSingleton::Kill(){
   delete m_render;
 }  
 
-//void RenderHandler::Draw(Model &model, Shader& shader){ // TODO: Override Draw method for Model class
-//	eg_debugData->counterDIModels_inUse++;
-//  for (int i = 0; i < model.meshes.size(); ++i){
-//      eg_debugData->counterDIMeshes_inUse++;
-//      DI::MaterialHandler::UseMaterial(*model.materials[i],shader);            
-//      DI::RendererSingleton::DrawElements(*model.meshes[i],GL_TRIANGLES);
-//  }
-//}
 void RendererSingleton::DrawElements(Mesh &mesh, unsigned int gl_render_type){
 	glBindVertexArray(mesh.buffer.vao);
   glDrawElements(gl_render_type,mesh.elements.count,GL_UNSIGNED_INT,0);
